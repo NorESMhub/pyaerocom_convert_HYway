@@ -1,15 +1,21 @@
 # Oddities in the data files
 
+## EMAC-DLR
+- no mmrso4 data
+
 ## EC-Earth3-AerChem
 - no mmrso4 data
 
 ## GFDL-AM4.1
-- no ozone data?
+- sulphate data very low?
 - Julian calendar
 - time code in variable name missing
+- partially wrong file naming scheme (see next)
 
 ## GFDL-ESM4-c1
-- Julian calendar; wrong variable name in file 
+- Julian calendar
+- Sulphate data very low
+- wrong variable name in file 
 
 According to the CMIP standard the variable name in the filename and the netcdf variable name are supposed to be the same (here: `o3` vs. `O3_dvmr`)
 ```
