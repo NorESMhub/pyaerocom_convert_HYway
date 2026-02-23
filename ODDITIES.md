@@ -6,6 +6,7 @@
 ## GFDL-AM4.1
 - no ozone data?
 - Julian calendar
+- time code in variable name missing
 
 ## GFDL-ESM4-c1
 - Julian calendar; wrong variable name in file 

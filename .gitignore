@@ -209,3 +209,4 @@ __marimo__/
 # remove netcdf files
 *.nc
 *.tmp
+*.swp

@@ -58,6 +58,7 @@ aerocom_vars[mmrso4]="mmrso4"
 aerocom_vars[ta]="ts"
 aerocom_vars[pfull]="ps"
 aerocom_vars[no2]="vmrno2"
+aerocom_vars[so2]="vmrso2"
 
 
 

@@ -59,6 +59,7 @@ aerocom_vars[mmrso4]="mmrso4"
 aerocom_vars[ta]="ts"
 aerocom_vars[pfull]="ps"
 aerocom_vars[no2]="vmrno2"
+aerocom_vars[so2]="vmrso2"
 
 create_dir () {
         dir=${1}
@@ -88,6 +89,9 @@ for file in "$@"
 		${NCKS} -O -d lev,${lowest_level} -v ${var} ${yearfile} ${tmpfile}
 		${NCWA} -O -a lev ${tmpfile} ${tmpfile}
 		#${NCRENAME} -O -v ${var},${aerocom_vars[${var}]} ${tmpfile}
+		if [[ ${var} != ${aerocom_vars[${var}]} ]]
+			then ${NCRENAME} -O -v ${var},${aerocom_vars[${var}]} ${tmpfile}
+		fi
 		outfile="aerocom_${Model}_${aerocom_vars[${var}]}_Surface_${year}_${timecode}.nc"
 		mv ${tmpfile} renamed/${outfile}
 		rm ${yearfile} 
