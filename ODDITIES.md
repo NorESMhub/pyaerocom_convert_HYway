@@ -9,7 +9,7 @@
 ## GFDL-AM4.1
 - sulphate data very low?
 - Julian calendar
-- time code in variable name missing
+- time code in filename missing
 - partially wrong file naming scheme (see next)
 
 ## GFDL-ESM4-c1
