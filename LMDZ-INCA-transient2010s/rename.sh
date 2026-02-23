@@ -57,7 +57,7 @@ aerocom_vars[o3]="vmro3"
 aerocom_vars[mmrso4]="mmrso4"
 aerocom_vars[ta]="ts"
 aerocom_vars[pfull]="ps"
-
+aerocom_vars[no2]="vmrno2"
 
 create_dir () {
         dir=${1}
@@ -91,21 +91,7 @@ for file in "$@"
 		if [[ ${var} != ${aerocom_vars[${var}]} ]]
 				then ${NCRENAME} -O -v ${var},${aerocom_vars[${var}]} ${tmpfile}
 		fi
-		# here some unit conversions will follow
-		if [[ ${var} == "o3" ]]
-			then mv ${tmpfile} renamed/${outfile}
-		elif [[ ${var} == "mmrso4" ]]
-			then 
-			#${NCRENAME} -O -v lev,ps ${tmpfile}
-			mv ${tmpfile} renamed/${outfile}
-		elif [[ ${var} == "pfull" ]]
-			then mv ${tmpfile} renamed/${outfile}
-		elif [[ ${var} == "ta" ]]
-			then mv ${tmpfile} renamed/${outfile}
-		else
-			echo "ERROR: input variable ${var} not supported"
-			rm ${tmpfile}
-		fi
+		mv ${tmpfile} renamed/${outfile}
 		rm ${yearfile} 
 	done
 
