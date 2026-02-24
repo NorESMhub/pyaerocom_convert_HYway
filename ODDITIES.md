@@ -6,12 +6,6 @@
 ## EC-Earth3-AerChem
 - no mmrso4 data
 
-## GFDL-AM4.1
-- sulphate data very low?
-- Julian calendar
-- time code in filename missing
-- partially wrong file naming scheme (see next)
-
 ## GFDL-ESM4-c1
 - Julian calendar
 - Sulphate data very low
