@@ -61,13 +61,20 @@ aerocom_vars[ta]="ts"
 aerocom_vars[pfull]="ps"
 aerocom_vars[no2]="vmrno2"
 aerocom_vars[so2]="vmrso2"
+aerocom_vars[no]="vmrno"
+aerocom_vars[co]="vmrco"
+aerocom_vars[nh3]="vmrnh3"
+
 
 declare -A vars_in_file
 vars_in_file[o3]="O3_dvmr"
 vars_in_file[mmrso4]="mmrso4"
 vars_in_file[ta]="ta"
 vars_in_file[no2]="NO2_dvmr"
+vars_in_file[no]="NO_dvmr"
+vars_in_file[co]="CO_dvmr"
 vars_in_file[so2]="SO2_dvmr"
+vars_in_file[nh3]="NH3_dvmr"
 
 
 create_dir () {
@@ -88,7 +95,7 @@ for file in "$@"
 	do echo ${file}
 	var=$(basename ${file} | cut -d_ -f1)
 	# adjust for some oddities in the dataset
-	if [[ ${var} == 'o3' || ${var} == 'no2' || ${var} == 'so2' ]]
+	if [[ ${var} == 'o3' || ${var} == 'no2' || ${var} == 'so2' || ${var} == 'no' || ${var} == 'co' || ${var} == 'nh3' ]]
 		then vert_coord_name='pfull'
 
 	fi
